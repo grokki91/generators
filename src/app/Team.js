@@ -8,6 +8,8 @@ export default class Team {
   }
 
   * [Symbol.iterator]() {
-    yield this;
+    for (const key of [...this.members]) {
+      yield key;
+    }
   }
 }
